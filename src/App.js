@@ -6,7 +6,24 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import "./App.css";
 
 const App = () => {
-  return <h1 className="underline text-3x1">App</h1>;
+  return (
+    <div>
+      <BrowserRouter>
+        <div className="flex relative dark:bg-main-dark-bg">
+          <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
+            <TooltipComponent content="Settings" position="Top">
+              <button
+                type="button"
+                className="text-3x1 p-3 hover:drop-shadow-x1 hover:bg-light-gray"
+              >
+                <FiSettings />
+              </button>
+            </TooltipComponent>
+          </div>
+        </div>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;
