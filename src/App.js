@@ -21,6 +21,7 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
+          {activeMenu ? <div>Sidebar</div> : <div>Sidebar w-0</div>}
         </div>
       </BrowserRouter>
     </div>
