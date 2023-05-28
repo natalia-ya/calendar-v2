@@ -16,6 +16,15 @@ const Sidebar = () => {
             <Link to="/" onClick={() => {}} className="items-center">
               <SiShopware /> <span>Shoppy</span>
             </Link>
+            <TooltipComponent content="Menu" position="BottomCenter">
+              <button
+                type="button"
+                onClick={() => {}}
+                className="text-x1 rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+              >
+                <MdOutlineCancel />
+              </button>
+            </TooltipComponent>
           </div>
         </>
       )}
