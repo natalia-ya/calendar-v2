@@ -29,7 +29,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsCleacked } =
+  const { activeMenu, setActiveMenu, isClicked, setIsCleacked, handleClick } =
     useStateContext();
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -56,14 +56,14 @@ const Navbar = () => {
         <NavButton
           title="Notifications"
           dotColor="#03C9D7"
-          customFunc={() => handleClick("notofication")}
+          customFunc={() => handleClick("notification")}
           color="blue"
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
             className="flex item-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-            onClick={() => handClick("userProfile")}
+            onClick={() => handleClick("userProfile")}
           >
             <img className="rounded-full w-8 h-8" src={avatar} />
             <p>
