@@ -7,6 +7,8 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSettings = () => {
+  const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+    useStateContext();
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
       <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] ">
@@ -62,10 +64,15 @@ const ThemeSettings = () => {
                 position="TopCenter"
               >
                 <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
-                  <button>
+                  <button
+                    type="button"
+                    className="h-10 w-10 rounded-full cursor-pointer"
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => {}}
+                  >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        item.color === currentColor ? "block" : "hidden"
+                        true ? "block" : "hidden"
                       }`}
                     />
                   </button>
